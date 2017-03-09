@@ -4,7 +4,8 @@
   "description": "Website status page in nodejs",
   "main": "index.js",
   "scripts": {
-    "devServer": "nodemon bin/status.js",
+    "start": "node bin/status",
+    "devServer": "nodemon bin/status",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

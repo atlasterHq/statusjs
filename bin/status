@@ -21,5 +21,9 @@ setInterval(function(){
   status.update();
 },parseInt(process.env.UpdateTime,10));
 
+app.get(function(req,res){
+  res.send("Page not found");
+});
+
 app.listen(process.env.HttpPort);
 module.exports = app;

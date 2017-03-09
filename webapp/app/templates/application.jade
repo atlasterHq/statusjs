@@ -1,5 +1,6 @@
-.container
+.container(ng-controller="statusCtrl")
   .head.success System status
-  .category(ng-repeat='i in [1,2,3,4,5,6]')
-    .name Website
-    .status.green Operational
+  .category(ng-repeat='(name,status) in status.data')
+    .name(ng-bind="name")
+    .status.green(ng-show='status==true') Operational
+    .status.red(ng-show='status==false') Error

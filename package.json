@@ -4,6 +4,7 @@
   "description": "Website status page in nodejs",
   "main": "index.js",
   "scripts": {
+    "devServer": "nodemon bin/status.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,19 @@
   },
   "homepage": "https://github.com/atlasterHq/statusjs#readme",
   "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3",
     "dotenv": "^4.0.0",
-    "expressjs": "^1.0.1"
+    "express": "^4.15.2",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

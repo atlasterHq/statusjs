@@ -29,7 +29,10 @@
     "grunt-contrib-jade": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^2.2.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "grunt-contrib-watch": "^1.0.0",
+    "memory-cache": "^0.1.6",
+    "request": "^2.80.0",
+    "restangular": "^1.6.1"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

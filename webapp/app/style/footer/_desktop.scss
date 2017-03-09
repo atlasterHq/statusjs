@@ -1,0 +1,17 @@
+footer {
+  width: 900px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  .right{
+    float: right;
+  }
+  a{
+    text-decoration: none;
+    color: rgba(0,0,0,.4);
+  }
+  a:hover {
+    color: $primary;
+    border-bottom: 1px dotted $primary;
+  }
+}

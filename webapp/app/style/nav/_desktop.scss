@@ -1,0 +1,17 @@
+$primary: #DF3535;
+$primary-hover: #AA1313;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
+nav {
+  padding: 0px;
+  margin:0px;
+  background: rgba(240,240,240,.6);
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  text-align: center;
+  .brand {
+    color: rgba(0,0,0,.3);
+    font-size: 30px;
+    line-height: 80px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+  }
+}

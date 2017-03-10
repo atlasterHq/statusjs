@@ -11,17 +11,22 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 var model = require('../models/watch');
 
-model
-  .find({})
-  .then(function(data){
-    console.log(data);
-  })
-  .catch(function(err){
-    console.log(err);
-  });
+var updateList = function(){
+  model
+    .find({})
+    .then(function(data){
+      var i =0;
+      for(i;i<data.length;i++){
+        status.add(data[i].name,data[i].url);
+      }
+      status.update();
+    })
+    .catch(function(err){
+      console.log(err);
+    });
+};
 
-status.add("Google","http://clients1.google.com/generate_204");
-status.update();
+updateList();
 
 var app = express();
 app.use(express.static('dist'));

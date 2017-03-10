@@ -1,8 +1,14 @@
-var model = require('../models/watch');
+require('dotenv').config();
+var mongoose = require('mongoose');
 var chalk = require('chalk');
 var prompt = require('prompt');
+mongoose.connect('mongodb://'+process.env.DbHost+'/'+process.env.DbName);
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+var model = require('../models/watch');
 
-console.log(chalk.red("Add new url to watch"));
+console.log(chalk.red.bold("Add new url to watch"));
 prompt.start();
 
 prompt.get(['name','url'],function(err,result){

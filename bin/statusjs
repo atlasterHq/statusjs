@@ -1,7 +1,24 @@
 require('dotenv').config();
 var express = require('express');
+var mongoose = require('mongoose');
 var statusLib  = require('../lib/status');
 var status = new statusLib();
+
+mongoose.connect('mongodb://'+process.env.DbHost+'/'+process.env.DbName);
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+
+var model = require('../models/watch');
+
+model
+  .find({})
+  .then(function(data){
+    console.log(data);
+  })
+  .catch(function(err){
+    console.log(err);
+  });
 
 status.add("Google","http://clients1.google.com/generate_204");
 status.update();
